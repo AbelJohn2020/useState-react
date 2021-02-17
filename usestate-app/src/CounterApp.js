@@ -4,7 +4,12 @@ function CounterApp() {
     const [counter, setCounter] = useState(0);
     
     const incrementCounter = () => {
-        setCounter(counter+1)
+        // for each change of state to have a new render we need "setCounter" because it refresh the screen
+        setCounter(counter+1);
+
+        //this is for update a state many times in the same scope we can do this
+        setCounter(precCounter => precCounter + 1);
+        // setCounter(a => a + 1);
     }
 
     return (
