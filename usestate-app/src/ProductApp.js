@@ -23,6 +23,8 @@ function ProductApp() {
             </button>
             <h1>{product.title}</h1>
             <h1>{product.description}</h1>
+
+            <pre> {JSON.stringify(product, null, 2)} </pre>
         </div>
     )
 }
